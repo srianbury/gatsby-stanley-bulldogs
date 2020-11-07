@@ -3,21 +3,29 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className="d-flex justify-content-between pl-4 pr-4 pt-1 pb-1 bg-dark">
     <div>
-      <h3>
-        <Link to="/">{siteTitle}</Link>
-      </h3>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/page-2">Page 2</Link>
-        </li>
+      <Link to="/" className="text-light">
+        <h3>{siteTitle}</h3>
+      </Link>
+    </div>
+    <div className="d-flex flex-wrap align-content-center">
+      <ul className="nav justify-content-center">
+        <NavItem title="Home" to="/" />
+        <NavItem title="Our Dogs" to="/our-dogs" />
+        <NavItem title="Litters" to="/litters" />
       </ul>
     </div>
   </header>
+);
+
+const NavItem = ({ to, title }) => (
+  <li className="nav-item ml-2 d-flex flex-wrap align-content-center">
+    <Link to={to}>
+      <h5 className="m-0 text-light">{title}</h5>
+    </Link>
+    }
+  </li>
 );
 
 Header.propTypes = {
