@@ -8,12 +8,14 @@ import pups from "../images/pups.jpg";
 const Home = () => (
   <Layout title="Home">
     <Parallax img={playing}>
-      <h1 className="bg-light text-dark p-3 rounded">
+      <h1 className="bg-light text-primary p-3 rounded">
         Welcome to Stanley Bulldogs!
       </h1>
     </Parallax>
     <Parallax img={pups}>
-      <h1 className="bg-light text-dark p-3 rounded">View our pups.</h1>
+      <h1 className="bg-light text-dark p-3 rounded">
+        <Link to="/litters">Past litters</Link>
+      </h1>
     </Parallax>
     <div className="container mt-3" style={{ height: "150px" }}>
       <p>
