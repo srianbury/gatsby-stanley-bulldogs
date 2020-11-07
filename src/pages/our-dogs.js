@@ -51,8 +51,8 @@ export const query = graphql`
             }
           }
           image {
-            fluid(maxHeight: 350, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_withWebp
+            fluid(maxWidth: 350, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }

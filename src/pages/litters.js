@@ -40,8 +40,8 @@ export const query = graphql`
           birthday(formatString: "MMMM, YYYY")
           images {
             id
-            fluid(maxHeight: 350, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_withWebp
+            fluid(maxWidth: 350, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
