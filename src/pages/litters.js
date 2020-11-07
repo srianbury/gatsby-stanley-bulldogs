@@ -5,8 +5,8 @@ import Layout from "../components/layout";
 
 const Litters = ({ data }) => (
   <Layout title="Litters">
-    <h1 className="row">Our Litters</h1>
-    <div>
+    <h1>Our Litters</h1>
+    <div className="pl-3 pr-3">
       {data.allContentfulLitter.edges.map(({ node }) => (
         <div key={node.id} className="mb-4">
           <div className="row">Mom: {node.mom}</div>
@@ -41,7 +41,7 @@ export const query = graphql`
           images {
             id
             fluid(maxHeight: 350, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }
