@@ -11,7 +11,7 @@ const Litters = ({ data }) => (
         <div key={node.id} className="mb-4">
           <div className="row">Mom: {node.mom}</div>
           <div className="row">Dad: {node.dad}</div>
-          <div className="row">Born: {node.birthday}</div>
+          <div className="row">Birthday: {node.birthday}</div>
           <div className="row">
             {node.images.map(image => (
               <GtsbImg
@@ -37,7 +37,7 @@ export const query = graphql`
           id
           mom
           dad
-          birthday
+          birthday(formatString: "MMMM, YYYY")
           images {
             id
             fluid(maxHeight: 350, resizingBehavior: SCALE) {

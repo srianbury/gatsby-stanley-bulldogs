@@ -12,7 +12,7 @@ const OurDogs = ({ data }) => (
           <GtsbImg alt="" fluid={node.image.fluid} />
           <div>Name: {node.name}</div>
           <div>Sex: {node.gender ? "Female" : "Male"}</div>
-          <div>Birthday: {node.birthday}</div>
+          <div>Age: {getAgeString(node.birthday)}</div>
           <div>Breed: {node.breed}</div>
           {node.about && node.about.internal && node.about.internal.content ? (
             <div>About: {node.about.internal.content}</div>
@@ -22,6 +22,17 @@ const OurDogs = ({ data }) => (
     </div>
   </Layout>
 );
+
+function getAgeString(birthday) {
+  const age = getAge(birthday);
+  return `${age} year${age === 1 ? "" : "s"} old`;
+}
+
+function getAge(birthday) {
+  const diffMs = Date.now() - new Date(birthday);
+  const ageDt = new Date(diffMs);
+  return Math.abs(ageDt.getUTCFullYear() - 1970);
+}
 
 export default OurDogs;
 export const query = graphql`
