@@ -7,12 +7,12 @@ const IndexPage = () => (
     <div className="row">
       <div className="col-12 col-md-6 col-lg-8">
         <form
-          name="contact"
+          name="newsletter"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="newsletter" />
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
