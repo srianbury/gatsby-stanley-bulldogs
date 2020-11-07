@@ -25,11 +25,9 @@ const Header = ({ siteTitle }) => (
 );
 
 const NavItem = ({ to, title }) => (
-  <Nav.Link>
-    <Link to={to} className="text-light">
-      {title}
-    </Link>
-  </Nav.Link>
+  <Link to={to} className="text-light ml-2">
+    {title}
+  </Link>
 );
 
 Header.propTypes = {
