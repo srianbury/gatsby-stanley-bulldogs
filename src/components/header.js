@@ -14,6 +14,7 @@ const Header = ({ siteTitle }) => (
         <NavItem title="Home" to="/" />
         <NavItem title="Our Dogs" to="/our-dogs" />
         <NavItem title="Litters" to="/litters" />
+        <NavItem title="Contact" to="/contact" />
       </ul>
     </div>
   </header>
