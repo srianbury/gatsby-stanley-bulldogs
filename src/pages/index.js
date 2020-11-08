@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Parallax from "../components/parallax";
-import playing from "../images/playing.gif";
+import playing from "../images/hannah_lucy_gus_playing.gif";
 import pups from "../images/pups.jpg";
 
 const Home = () => (

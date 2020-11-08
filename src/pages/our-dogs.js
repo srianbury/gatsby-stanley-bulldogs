@@ -12,8 +12,8 @@ const OurDogs = ({ data }) => (
         {data.allContentfulDog.edges.map(({ node }) => (
           <div key={node.id} className="col-6 col-md-4 mb-4">
             <GtsbImg alt="" fluid={node.image.fluid} />
-            <div>Name: {node.name}</div>
-            <div>Sex: {node.gender ? "Female" : "Male"}</div>
+            <h4 className="mb-0">{node.name}</h4>
+            <div>{node.gender ? "Female" : "Male"}</div>
             <div>Age: {getAgeString(node.birthday)}</div>
             <div>Breed: {node.breed}</div>
             {node.about &&
