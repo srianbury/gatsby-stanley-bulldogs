@@ -30,7 +30,7 @@ const Questions = () => (
   <div className="row">
     <div className="col-12 col-md-8">
       <h3>Questions</h3>
-      <p>Send us a messages if you have any questions.</p>
+      <p>Send us a message if you have any questions.</p>
       <form
         name="questions"
         method="post"
