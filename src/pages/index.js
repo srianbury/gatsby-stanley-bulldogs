@@ -31,7 +31,7 @@ const Home = () => (
       >
         <h5>
           <span className="mr-1">View us on Instagram.</span>
-          <i class="fab fa-instagram fa-lg" />
+          <i className="fab fa-instagram fa-lg" />
         </h5>
       </a>
     </div>
