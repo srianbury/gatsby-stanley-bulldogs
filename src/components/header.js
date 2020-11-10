@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
 );
 
 const NavItem = ({ to, title }) => (
-  <Link to={to} className="text-light ml-2">
+  <Link to={to} className="text-light ml-2 mb-2 mb-sm-1 mt-2 mt-sm-1">
     {title}
   </Link>
 );
