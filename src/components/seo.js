@@ -9,24 +9,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { getSiteText } from "../utils/getSiteText";
+import * as CONSTANTS from "../constants";
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+const SEO = ({ description, lang, meta, title }) => {
+  const siteData = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
+        allContentfulSiteText(limit: 1) {
+          edges {
+            node {
+              siteTitle
+              siteDescription
+            }
           }
         }
       }
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const metaDescription =
+    description || getSiteText(siteData, CONSTANTS.SITE_TEXT.DESCRIPTION);
+  const defaultTitle = getSiteText(siteData, CONSTANTS.SITE_TEXT.TITLE);
 
   return (
     <Helmet
@@ -34,7 +38,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={`%s | ${defaultTitle}`}
       meta={[
         {
           name: `description`,
@@ -58,7 +62,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: ``,
         },
         {
           name: `twitter:title`,
@@ -78,7 +82,7 @@ function SEO({ description, lang, meta, title }) {
       ></link>
     </Helmet>
   );
-}
+};
 
 SEO.defaultProps = {
   lang: `en`,
