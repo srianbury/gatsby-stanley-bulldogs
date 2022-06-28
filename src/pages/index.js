@@ -14,7 +14,7 @@ const Home = () => (
     </Parallax>
     <Parallax img={pups}>
       <h1 className="bg-light text-dark p-3 rounded">
-        <Link to="/litters">Past litters</Link>
+        <Link to="/litters">Our Litters</Link>
       </h1>
     </Parallax>
     <div className="container mt-3" style={{ height: "150px" }}>
