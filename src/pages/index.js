@@ -22,7 +22,7 @@ const Home = () => (
         <Link to="/contact" className="pr-1">
           <h5 className="d-inline">Contact us!</h5>
         </Link>
-        Get updated when our next litter arrives or ask a questions!
+        Get notified when we have our next litter or ask a question.
       </p>
       <a
         href="http://instagram.com/stanleybulldogs"
@@ -30,7 +30,7 @@ const Home = () => (
         rel="noreferrer"
       >
         <h5>
-          <span className="mr-1">View us on Instagram.</span>
+          <span className="mr-1">View us on Instagram</span>
           <i className="fab fa-instagram fa-lg" />
         </h5>
       </a>
