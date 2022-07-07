@@ -1,23 +1,53 @@
 import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
-import Parallax from "../components/parallax";
-import playing from "../images/hannah_lucy_gus_playing.gif";
+import stanleycover from "../images/stanley-skate-wider.png";
 import pups from "../images/pups.jpg";
 
 const Home = () => (
   <Layout title="Home">
-    <Parallax img={playing}>
-      <h1 className="bg-light text-primary p-3 rounded">
-        Welcome to Stanley Bulldogs!
-      </h1>
-    </Parallax>
-    <Parallax img={pups}>
-      <h1 className="bg-light text-dark p-3 rounded">
-        <Link to="/litters">Our Litters</Link>
-      </h1>
-    </Parallax>
-    <div className="container mt-3" style={{ height: "150px" }}>
+    <div className="d-flex justify-content-center">
+      <img
+        src={stanleycover}
+        alt="Stanley Skateboarding"
+        style={{
+          width: "100%",
+          maxWidth: "991.98px",
+          height: "auto",
+        }}
+      />
+    </div>
+    <div
+      className="d-flex justify-content-center py-3 px-3 px-lg-0"
+      style={{ width: "100%" }}
+    >
+      <div>
+        <h1 className="text-dark rounded m-0">Welcome to Stanley Bulldogs!</h1>
+      </div>
+    </div>
+    <div className="d-flex justify-content-center ">
+      <img
+        src={pups}
+        alt="Pups"
+        style={{
+          width: "100%",
+          maxWidth: "991.98px",
+          height: "auto",
+        }}
+      />
+    </div>
+    <div
+      className="d-flex justify-content-center py-3 px-3 px-lg-0"
+      style={{ width: "100%" }}
+    >
+      <Link to="/litters">
+        <div className="text-dark">
+          <h1 className="rounded m-0">View our Litters</h1>
+          <h4 className="rounded m-0">(A litter is currently available!)</h4>
+        </div>
+      </Link>
+    </div>
+    <div className="mt-3 mb-3 px-3 px-lg-0">
       <p>
         <Link to="/contact" className="pr-1">
           <h5 className="d-inline">Contact us!</h5>
