@@ -24,7 +24,14 @@ const Layout = ({ title, children }) => {
     <>
       <SEO title={title} />
       <Header siteTitle={getSiteText(data, CONSTANTS.SITE_TEXT.TITLE)} />
-      <main>{children}</main>
+      <main>
+        <div style={{
+          maxWidth: '991.98px',
+          margin: 'auto'
+        }}>
+          {children}
+        </div>
+      </main>
       <div className="m-4"></div>
     </>
   );
